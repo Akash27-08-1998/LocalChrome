@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="10" passed="10">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="28937" started-at="2020-07-23T15:14:09Z" finished-at="2020-07-23T15:14:38Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="28937" started-at="2020-07-23T15:14:09Z" finished-at="2020-07-23T15:14:38Z">
+      <class name="com.demo.test">
+        <test-method status="PASS" signature="invokeBrowser()[pri:0, instance:com.demo.test@7c455e96]" name="invokeBrowser" is-config="true" duration-ms="5949" started-at="2020-07-23T15:14:09Z" finished-at="2020-07-23T15:14:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- invokeBrowser -->
+        <test-method status="PASS" signature="verifyTitle()[pri:0, instance:com.demo.test@7c455e96]" name="verifyTitle" duration-ms="301" started-at="2020-07-23T15:14:15Z" finished-at="2020-07-23T15:14:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyTitle -->
+        <test-method status="PASS" signature="flush(org.testng.ITestResult)[pri:0, instance:com.demo.test@7c455e96]" name="flush" is-config="true" duration-ms="419" started-at="2020-07-23T15:14:15Z" finished-at="2020-07-23T15:14:16Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyTitle status=SUCCESS method=test.verifyTitle()[pri:0, instance:com.demo.test@7c455e96] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- flush -->
+        <test-method status="PASS" signature="step1()[pri:1, instance:com.demo.test@7c455e96]" name="step1" duration-ms="2206" started-at="2020-07-23T15:14:16Z" finished-at="2020-07-23T15:14:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- step1 -->
+        <test-method status="PASS" signature="flush(org.testng.ITestResult)[pri:0, instance:com.demo.test@7c455e96]" name="flush" is-config="true" duration-ms="47" started-at="2020-07-23T15:14:18Z" finished-at="2020-07-23T15:14:18Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=step1 status=SUCCESS method=test.step1()[pri:1, instance:com.demo.test@7c455e96] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- flush -->
+        <test-method status="PASS" signature="step2()[pri:2, instance:com.demo.test@7c455e96]" name="step2" duration-ms="3364" started-at="2020-07-23T15:14:18Z" finished-at="2020-07-23T15:14:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- step2 -->
+        <test-method status="PASS" signature="flush(org.testng.ITestResult)[pri:0, instance:com.demo.test@7c455e96]" name="flush" is-config="true" duration-ms="32" started-at="2020-07-23T15:14:21Z" finished-at="2020-07-23T15:14:21Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=step2 status=SUCCESS method=test.step2()[pri:2, instance:com.demo.test@7c455e96] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- flush -->
+        <test-method status="PASS" signature="step3()[pri:3, instance:com.demo.test@7c455e96]" name="step3" duration-ms="2298" started-at="2020-07-23T15:14:21Z" finished-at="2020-07-23T15:14:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- step3 -->
+        <test-method status="PASS" signature="flush(org.testng.ITestResult)[pri:0, instance:com.demo.test@7c455e96]" name="flush" is-config="true" duration-ms="46" started-at="2020-07-23T15:14:24Z" finished-at="2020-07-23T15:14:24Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=step3 status=SUCCESS method=test.step3()[pri:3, instance:com.demo.test@7c455e96] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- flush -->
+        <test-method status="PASS" signature="step4()[pri:4, instance:com.demo.test@7c455e96]" name="step4" duration-ms="2296" started-at="2020-07-23T15:14:24Z" finished-at="2020-07-23T15:14:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- step4 -->
+        <test-method status="PASS" signature="flush(org.testng.ITestResult)[pri:0, instance:com.demo.test@7c455e96]" name="flush" is-config="true" duration-ms="31" started-at="2020-07-23T15:14:26Z" finished-at="2020-07-23T15:14:26Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=step4 status=SUCCESS method=test.step4()[pri:4, instance:com.demo.test@7c455e96] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- flush -->
+        <test-method status="PASS" signature="step5()[pri:5, instance:com.demo.test@7c455e96]" name="step5" duration-ms="98" started-at="2020-07-23T15:14:26Z" finished-at="2020-07-23T15:14:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- step5 -->
+        <test-method status="PASS" signature="flush(org.testng.ITestResult)[pri:0, instance:com.demo.test@7c455e96]" name="flush" is-config="true" duration-ms="27" started-at="2020-07-23T15:14:26Z" finished-at="2020-07-23T15:14:26Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=step5 status=SUCCESS method=test.step5()[pri:5, instance:com.demo.test@7c455e96] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- flush -->
+        <test-method status="PASS" signature="step6()[pri:6, instance:com.demo.test@7c455e96]" name="step6" duration-ms="3057" started-at="2020-07-23T15:14:26Z" finished-at="2020-07-23T15:14:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- step6 -->
+        <test-method status="PASS" signature="flush(org.testng.ITestResult)[pri:0, instance:com.demo.test@7c455e96]" name="flush" is-config="true" duration-ms="44" started-at="2020-07-23T15:14:29Z" finished-at="2020-07-23T15:14:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=step6 status=SUCCESS method=test.step6()[pri:6, instance:com.demo.test@7c455e96] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- flush -->
+        <test-method status="PASS" signature="step7()[pri:7, instance:com.demo.test@7c455e96]" name="step7" duration-ms="322" started-at="2020-07-23T15:14:29Z" finished-at="2020-07-23T15:14:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- step7 -->
+        <test-method status="PASS" signature="flush(org.testng.ITestResult)[pri:0, instance:com.demo.test@7c455e96]" name="flush" is-config="true" duration-ms="25" started-at="2020-07-23T15:14:30Z" finished-at="2020-07-23T15:14:30Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=step7 status=SUCCESS method=test.step7()[pri:7, instance:com.demo.test@7c455e96] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- flush -->
+        <test-method status="PASS" signature="step8()[pri:8, instance:com.demo.test@7c455e96]" name="step8" duration-ms="3474" started-at="2020-07-23T15:14:30Z" finished-at="2020-07-23T15:14:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- step8 -->
+        <test-method status="PASS" signature="flush(org.testng.ITestResult)[pri:0, instance:com.demo.test@7c455e96]" name="flush" is-config="true" duration-ms="26" started-at="2020-07-23T15:14:33Z" finished-at="2020-07-23T15:14:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=step8 status=SUCCESS method=test.step8()[pri:8, instance:com.demo.test@7c455e96] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- flush -->
+        <test-method status="PASS" signature="step9()[pri:9, instance:com.demo.test@7c455e96]" name="step9" duration-ms="297" started-at="2020-07-23T15:14:33Z" finished-at="2020-07-23T15:14:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- step9 -->
+        <test-method status="PASS" signature="flush(org.testng.ITestResult)[pri:0, instance:com.demo.test@7c455e96]" name="flush" is-config="true" duration-ms="36" started-at="2020-07-23T15:14:33Z" finished-at="2020-07-23T15:14:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=step9 status=SUCCESS method=test.step9()[pri:9, instance:com.demo.test@7c455e96] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- flush -->
+        <test-method status="PASS" signature="closing()[pri:0, instance:com.demo.test@7c455e96]" name="closing" is-config="true" duration-ms="4344" started-at="2020-07-23T15:14:33Z" finished-at="2020-07-23T15:14:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closing -->
+      </class> <!-- com.demo.test -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
