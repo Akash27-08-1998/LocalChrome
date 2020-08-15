@@ -11,7 +11,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 
 public class screenshot {
-	public String ss(WebDriver driver) throws IOException {
+	public String screen(WebDriver driver) throws IOException {
 		//WebDriver driver = new ChromeDriver();
 		String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
 		TakesScreenshot ScrObj = (TakesScreenshot) driver;

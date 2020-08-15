@@ -15,12 +15,14 @@ static Double value;
 	
 	public Double read(String filename,String sheetName,int i, int j) throws IOException {
 		
+		//reading data from an excel sheet
 		File f = new File("C:\\Users\\ADMIN\\eclipse-workspace\\EMIcalculatorHackathon\\excel-files\\input.xlsx");
 		FileInputStream fis = new FileInputStream(f);
 		Workbook wb = null;
 		
 		String extension = filename.substring(filename.indexOf("."));
 		
+		//checking for extension xls
 		if(extension.equals(".xls")) {
 			
 			wb=new HSSFWorkbook(fis);
@@ -31,6 +33,7 @@ static Double value;
 			
 		}
 		
+		//checking for extension xlsx
 		else if(extension.equals(".xlsx")) {
 			
 			wb=new XSSFWorkbook(fis);

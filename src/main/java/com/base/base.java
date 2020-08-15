@@ -21,7 +21,6 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 
 import com.excel.reading;
 import com.excel.writing;
-import com.screenshot.screenshot;
 import com.utilities.pom;
 
 import io.qameta.allure.Step;
@@ -33,6 +32,7 @@ public class base {
 	public static reading r = new reading();
 	public static String hubURL = "http://localhost:4444/wd/hub";
 	
+	//Driver invocation for multiple browser with selenium grid 
 	@Step("Launching the browser step....")
 	public static void launchBrowser() throws IOException, InterruptedException  {
 		
@@ -45,9 +45,10 @@ public class base {
 			
 			System.out.println(e.getMessage());
 		}
-		
+	
+	//running the script in selenium grid with firefox browser
 	if(prop.getProperty("mode").equalsIgnoreCase("grid")) {
-		if(prop.getProperty("gridBrowser").equalsIgnoreCase("firefox")) {
+		if(prop.getProperty("browser").equalsIgnoreCase("firefox")) {
 			
 			DesiredCapabilities cap = new DesiredCapabilities();
 			cap.setCapability("marionette", true);
@@ -57,12 +58,14 @@ public class base {
 			
 			driver.get(prop.getProperty("url"));
 			driver.manage().window().maximize();
-			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 			driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+			
 			
 		  }
 	
-		else if(prop.getProperty("gridBrowser").equalsIgnoreCase("chrome")) {
+		//running the script in selenium grid with chrome browser
+		else if(prop.getProperty("browser").equalsIgnoreCase("chrome")) {
 			
 			DesiredCapabilities cap = new DesiredCapabilities();
 			cap.setBrowserName("chrome");
@@ -75,11 +78,13 @@ public class base {
 			
 			driver.get(prop.getProperty("url"));
 			driver.manage().window().maximize();
-			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 			driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+			
 		  }
 		
-		else if(prop.getProperty("gridBrowser").equalsIgnoreCase("IE")) {
+		//running the script in selenium grid with IE browser
+		else if(prop.getProperty("browser").equalsIgnoreCase("IE")) {
 			
 			DesiredCapabilities cap = new DesiredCapabilities();
 			cap.setBrowserName("internet explorer");
@@ -89,16 +94,18 @@ public class base {
 			
 			driver.get(prop.getProperty("url"));
 			driver.manage().window().maximize();
-			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 			driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+			
 		 }
 		
 		else {
-			   System.out.println("Please choose a supported gridBrowser");
+			   System.out.println("Please choose a supported Browser");
 			 }
 	
 	   }
 	
+	//running the script in selenium with firefox browser
 	else if(prop.getProperty("mode").equalsIgnoreCase("local")) {
 	
 		if(prop.getProperty("browser").equalsIgnoreCase("firefox")) {
@@ -111,10 +118,12 @@ public class base {
 			
 			driver.get(prop.getProperty("url"));
 			driver.manage().window().maximize();
-			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 			driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+			
 		}
 	
+		//running the script in selenium with chrome browser
 		else if(prop.getProperty("browser").equalsIgnoreCase("chrome")) {
 			
 			System.setProperty("webdriver.chrome.driver", prop.getProperty("driverpath")+"chromedriver.exe");
@@ -122,9 +131,12 @@ public class base {
 			
 			driver.get(prop.getProperty("url"));
 			driver.manage().window().maximize();
-			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 			driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+			
 		  }
+		
+		//running the script in selenium with IE browser
 		else if(prop.getProperty("browser").equalsIgnoreCase("IE")) {
 			
 			System.setProperty("webdriver.ie.driver", prop.getProperty("driverpath")+"IEDriverServer.exe");
@@ -132,8 +144,9 @@ public class base {
 			
 			driver.get(prop.getProperty("url"));
 			driver.manage().window().maximize();
-			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 			driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+			
 		}
 		
 		else {
@@ -148,17 +161,18 @@ public class base {
 	
 }
 	
-
+	//Selecting the car loan tab
 	@Step("Selecting the car loan section step....")
 	public void carloan() throws InterruptedException {
 		
 		driver.findElement(pom.car).click();
-		Thread.sleep(2000);
+		
 		
 	}
 	
+	//Entering the loan amount
 	@Step("Entering the loan amount step....")
-	public void enterloanAmount() throws InterruptedException, IOException {
+	public void enterloanAmount() throws IOException {
 		
 		String fileName= prop.getProperty("filename");
 		String sheetName = prop.getProperty("sheetname");
@@ -167,13 +181,14 @@ public class base {
 		
 		driver.findElement(pom.loanAmount).sendKeys(Keys.chord(Keys.CONTROL,"a",Keys.CLEAR));
 		driver.findElement(pom.loanAmount).sendKeys(loanAmount);
-		Thread.sleep(2000);
+		
 		
 		
 	}
 	
+	//Entering the loan interest rate
 	@Step("Entering the interest rate step....")
-	public void enterInterest() throws InterruptedException, IOException{
+	public void enterInterest() throws IOException{
 		
 		String fileName= prop.getProperty("filename");
 		String sheetName = prop.getProperty("sheetname");
@@ -182,11 +197,39 @@ public class base {
 		
 		driver.findElement(pom.loanInterest).sendKeys(Keys.chord(Keys.CONTROL,"a",Keys.CLEAR));
 		driver.findElement(pom.loanInterest).sendKeys(interest);
-		Thread.sleep(2000);
+		
 	}
 	
+	//Entering the loan interest rate for negative testing
+	@Step("Entering the interest rate step....")
+	public void enterInterestForNegativeTest() throws IOException, InterruptedException{
+		
+		String fileName= prop.getProperty("filename");
+		String sheetName = prop.getProperty("sheetname");
+		
+		String interest = Double.toString(r.read(fileName, sheetName, 1, 3));
+		
+		driver.findElement(pom.loanInterest).sendKeys(Keys.chord(Keys.CONTROL,"a",Keys.CLEAR));
+		driver.findElement(pom.loanInterest).sendKeys(interest);
+		Thread.sleep(2000);
+		
+	}
+	
+	//Checking the interest rate value for negative testing
+	@Step("Checking the interest rate value step....")
+	public String error() {
+		driver.findElement(pom.tenure).click();
+		String value=driver.findElement(pom.loanInterest).getAttribute("value");
+		System.out.println();
+		System.out.println("The current rate of interest is: "+value);
+		System.out.println();
+		return value;
+		
+	}
+	
+	//Entering the loan tenure 
 	@Step("Entering the tenure value step....")
-	public void enterTenure() throws InterruptedException, IOException {
+	public void enterTenure() throws IOException {
 		
 		String fileName= prop.getProperty("filename");
 		String sheetName = prop.getProperty("sheetname");
@@ -195,10 +238,11 @@ public class base {
 		
 		driver.findElement(pom.tenure).sendKeys(Keys.chord(Keys.CONTROL,"a",Keys.CLEAR));
 		driver.findElement(pom.tenure).sendKeys(tenure);
-		Thread.sleep(2000);
+		
 		
 	}
 	
+	//Generating the loan details
 	@Step("Gathering the loan details step....")
 	public void generate() {
 		driver.findElement(pom.yr).click();
@@ -206,6 +250,7 @@ public class base {
 		driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
 	}
 	
+	//Generating the loan graph
 	@Step("Viewing the loan details graph step....")
 	public void scrollToGraph() throws InterruptedException {
 		
@@ -214,13 +259,7 @@ public class base {
 		Thread.sleep(3000);
 	}
 	
-	@Step("Capturing the Screen Shot step....")
-	public String screenShot() throws IOException {
-		screenshot s = new screenshot();
-		String path=s.ss(driver);
-		return path;
-	}
-	
+	//Generating the loan amount and interest rate for the first month
 	@Step("Viewing the monthly principle amount and interest rate step....")
 	public void ScrollToDetails() throws InterruptedException {
 		WebElement ele1 = driver.findElement(pom.scroller);
@@ -229,19 +268,21 @@ public class base {
 		js.executeScript("arguments[0].scrollIntoView()",ele1);
 		Thread.sleep(1000);
 		js.executeScript("arguments[0].click()", ele2);
-		
+		Thread.sleep(3000);
 	}
 	
+	//Writing the data into an excel file
 	@Step("Gathering the monthly amount and interest rate step....")
 	public void fetchDetails() throws IOException {
 		String principleAmount = driver.findElement(pom.amount).getText();
-		String interestAmount = driver.findElement(pom.interest).getText();
+		String interestRate = driver.findElement(pom.interest).getText();
 		
 		writing w = new writing();
-		w.Write(principleAmount,interestAmount);
+		w.Write(principleAmount,interestRate);
 		
 	}
 	
+	//Closing the application
 	@Step("Closing the browser step....")
 	public void close() throws InterruptedException {
 		Thread.sleep(2000);

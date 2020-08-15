@@ -1,0 +1,1 @@
+{"uuid":"50e8ceee-04ba-45b4-85b8-fe691865120b","name":"com.demo.test.flush","children":["aceb0545-847a-44e9-8dd6-4e2cc077c181"],"description":"","befores":[],"afters":[{"name":"flush","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1597467638432,"stop":1597467638848}],"links":[],"start":1597467638431,"stop":1597467638849}

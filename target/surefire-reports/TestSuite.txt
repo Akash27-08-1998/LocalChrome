@@ -1,4 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 31.152 s - in TestSuite
+Tests run: 21, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 51.523 s <<< FAILURE! - in TestSuite
+com.demo.negativeTest.step3  Time elapsed: 4.939 s  <<< FAILURE!
+java.lang.AssertionError: The interest rate is not 0 expected [true] but found [false]
+	at com.demo.negativeTest.step3(negativeTest.java:119)
+

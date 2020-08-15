@@ -3,6 +3,8 @@ package com.utilities;
 import org.openqa.selenium.By;
 
 public class pom {
+	
+	//Locating the WebElements required
 	public static final By car= By.xpath("//li[3]/a[@href='#']");
 	public static final By loanAmount = By.id("loanamount");
 	public static final By loanInterest = By.xpath("//*[@id='loaninterest']");
